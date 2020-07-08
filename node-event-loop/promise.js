@@ -1,5 +1,8 @@
 let done = false
 
+// the created promise will eventually end in a resolved state or in a rejected state
+// then call their respective callback functions (passed to then and catch) upon finishing
+
 const isItDoneYet = new Promise((resolve, reject) => {
     if (done) {
         const workDone = 'Here is the thing I built'
@@ -9,6 +12,7 @@ const isItDoneYet = new Promise((resolve, reject) => {
         reject(why)
     }
 })
+
 
 // console.log(isItDoneYet)
 // returns a Promise object with the text "Here is the..."
